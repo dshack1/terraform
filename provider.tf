@@ -1,4 +1,5 @@
 terraform {
+  
   backend "remote" {
     hostname = "app.terraform.io"
     organization = "development-ds"
@@ -7,4 +8,8 @@ terraform {
       name = "terraform"
     }
   }
+}
+
+provider "aws" {
+  region = "us-east-1"
 }
