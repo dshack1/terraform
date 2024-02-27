@@ -47,3 +47,14 @@ resource "aws_iam_role" "test_role_2" {
 }
 
 ##
+
+
+resource "aws_instance" "web" {
+  ami           = "ami-0ff8a91507f77f867"
+  instance_type = "t3.xlarge"
+
+  tags = {
+    Name = "HelloWorld"
+  }
+}
+
